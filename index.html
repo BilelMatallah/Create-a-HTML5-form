@@ -10,8 +10,10 @@
 </head>
 <body>
     <!--Añadí el atributo name donde lo consideré oportuno y he definido mejor el type de los input-->
-    <!-- También añadi los atributos minlength y maxlength para controlar el número de digitos que introduciría el usuario en Card # y CVC # -->
-    <!-- Añadí también el atributo "required" -->
+    
+    <!-- También añadi los atributos minlength y maxlength para controlar el número de digitos que introduciría el usuario en CVC #, en Card # no he podido limitarlo. Según lo que leí, se haría con Javascript-->
+    
+    <!-- Añadí también el atributo "required" y "aria-required" en el caso del checkbox -->
     
     <div class="container">
         <div class="card">
@@ -24,36 +26,36 @@
                 <div class="row">
                     <div class="col-sm-7 my-3">
                         <label for="Card">Card #</label>
-                        <input type="number" name="card-number" class="form-control" placeholder="XXXXXXXXXXXXXXXX" aria-label="City" required>
+                        <input type="number" name="card-number" class="form-control" placeholder="XXXXXXXXXXXXXXXX" required>
                     </div>
                     <div class="col-sm-2 my-3">
                         <label for="Card">CVC #</label>
                         <!-- Definí el type como "number". No supe como usar el type "password" pero que solo acepte números -->
-                        <input type="number" name="num-seguridad" class="form-control" placeholder="0000" aria-label="State" minlength="3" maxlength="3" required>
+                        <input type="number" name="num-seguridad" class="form-control" placeholder="000" minlength="3" maxlength="3" required>
                     </div>
                     <div class="col-sm-3 my-3">
                         <label for="Card">Amount</label>
-                        <input type="number" name="cuantia" class="form-control" placeholder="Amount" aria-label="Zip" required>
+                        <input type="number" name="cuantia" class="form-control" placeholder="Amount" required>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-6  my-3">
                         <label for="Fname">First Name</label>
-                        <input type="text" name="nombre" class="form-control" aria-label="Fname" required>
+                        <input type="text" name="nombre" class="form-control" required>
                     </div>
                     <div class="col-sm-6 my-3">
                         <label for="Lname">Last Name</label>
-                        <input type="text" name="apellidos" class="form-control" aria-label="Lname" required>
+                        <input type="text" name="apellidos" class="form-control" required>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-6 my-3">
                         <label for="City">City</label>
-                        <input type="text" name="municipio" class="form-control" aria-label="City" required>
+                        <input type="text" name="municipio" class="form-control" required>
                     </div>
                     <div class="col-sm-3 my-3">
                         <label for="State">State</label>
-                        <select name="provincia" class="form-select" aria-label="State" required>
+                        <select name="provincia" class="form-select" required>
                             <option selected>Pick a state</option>
                             <option value="1">Kansas</option>
                             <option value="2">Ohio</option>
@@ -62,7 +64,7 @@
                     </div>
                     <div class="col-sm-3 my-3">
                         <label for="City">Postal Code</label>
-                        <input type="number" name="codigopostal" class="form-control" aria-label="Pcode" required>
+                        <input type="number" name="codigopostal" class="form-control" required>
                     </div>
                 </div>
 
@@ -70,7 +72,7 @@
                     <div class="col-sm-8 col-md-6 col-lg-4">
                         <p>We accept</p>
                     
-                        <div class="card text-bg-secondary mb-3 d-flex flex-row justify-content-center p-2 gap-4 gap-sm-4 gap-md-4 gap-lg-3 gap-xl-4 gap-xxl-5 w-lg-75">
+                        <div class="card text-bg-secondary mb-3 d-flex flex-row justify-content-center p-2 gap-4 gap-sm-4 gap-md-4 gap-lg-3 gap-xl-4 gap-xxl-5 w-lg-75" aria-required="true">
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
                                 <i class="fa-brands fa-cc-mastercard "></i>
